@@ -1,16 +1,14 @@
 #  Crear workflow de caza de amenazas en n8n
 
-- `Only me`
-- `Other` -> `Security` -> OK
-- `Ecommerce`
-- `Setting up a webhook` -> OK
-- `Friend / Word of mouth` -> Submit
-- Skip x2
-
-
 ## Objetivo de la práctica:
 
 Al finalizar la práctica, serás capaz de:
+
+- Configurar un flujo de caza de amenazas en n8n que incluya un Webhook de entrada, nodos HTTP Request, Set y Code para recopilar y enriquecer eventos desde el servidor Ubuntu.
+
+- Normalizar y evaluar riesgos usando lógica personalizada (nodo Code) y reglas condicionales (nodo IF) para asignar puntajes y clasificar niveles de riesgo.
+
+- Orquestar acciones automáticas y realizar pruebas: enviar bloqueos al servicio de mitigación (/context/block), registrar eventos (/logs) y validar el flujo con Postman.
 
 ## Diagrama del laboratorio 
 El siguiente diagrama resume visualmente lo que realizarás a lo largo de la siguiente práctica. 
