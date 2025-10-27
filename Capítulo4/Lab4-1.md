@@ -13,7 +13,7 @@ Al finalizar la práctica, serás capaz de:
 ## Diagrama del laboratorio 
 El siguiente diagrama resume visualmente lo que realizarás a lo largo de la siguiente práctica. 
 
-![diagrama1](../images/3Capitulo1Intro1.png)
+![diagrama1](../images/4Capitulo1Lab58.png)
 
 ## Duración aproximada:
 - 60 minutos.
