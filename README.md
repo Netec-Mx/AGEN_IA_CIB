@@ -1,6 +1,6 @@
 <img src="images/neteclogo.png" alt="logo" width="300"/>
 
-# Creación de agentes con Copilot Studio MCP, N8N y LLM
+# Agentes de IA Gen en Ciberseguridad
 
 ## Plataforma de laboratorios
 
