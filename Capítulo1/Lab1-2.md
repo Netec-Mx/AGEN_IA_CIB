@@ -170,23 +170,19 @@ Hazle la siguiente pregunta:
 
 > **Nota:** Si quieres validar que la respuesta sea correcta, dirigete al sitio de SharePoint antes mencionado.
 
+![LabImage](../images/1Capitulo2Lab29.png)
+
 ---
 
-**Paso 13.** El problema ahora es que está dando nombres propios, vamos a modificar esto en las instrucciones. 
+**Paso 10.** El problema ahora es que está dando nombres propios, vamos a modificar esto en las instrucciones. 
 
-Regresa a la pestaña de **Información general** y haz clic nuvamente en **Editar** de la sección ***Instrucciones***. 
-
-Agrega la siguiente instrucción al inicio:
+Regresa a la pestaña **Build** y en **Instructions** agrega la siguiente indicación en la sección de Limitaciones que creaste previamente:
 
 `No debes dar nombres propios de los colaboradores, esa información debe ser confidencial`.
 
-Luego, haz clic en el botón **Guardar**.
-
-![LabImage](../images/1Capitulo2Lab32.png)
-
 ---
 
-**Paso 14.** En la ventana de chat de prueba del agente, envíale nuevamente el siguiente prompt:
+**Paso 11.** En la ventana de chat de prueba del agente, envíale nuevamente el siguiente prompt:
 
 `¿Cuál es el colaborador que más gana en la organización?`
 
@@ -196,15 +192,11 @@ Observa que ahora no da nombres propios.
 
 ### Tarea 5. Configurar una acción con un conector
 
-**Paso 1.** Cambia a la pestaña **Herramientas** y haz clic en el botón **+ Agregar herramienta**.
-
-![LabImage](../images/1Capitulo2Lab34.png)
+**Paso 1.** Cambia a la pestaña **Build** nuevamente y haz clic en **Tools**.
 
 ---
 
 **Paso 2.** Tómate un momento para ver las herramientas disponibles. Selecciona el conector **Office 365 Outlook**.
-
-![LabImage](../images/1Capitulo2Lab35.png)
 
 ---
 
@@ -214,134 +206,33 @@ Observa que ahora no da nombres propios.
 
 ---
 
-**Paso 4.** En la siguiente ventana haz clic en la opción **No conectado** y luego en **Crear una nueva conexión**.
-
-![LabImage](../images/1Capitulo2Lab37.png)
+**Paso 4.** En la siguiente ventana haz clic en el botón **+ Add**.
 
 ---
 
-**Paso 5.** Ahora, en la siguiente ventana haz clic en el botón **Crear**.
+**Paso 5.** Ahora tienes una nueva herramienta para el agente en cuestión. Debes decirle cómo usarlo a través de las instrucciones. Cambia nuevamente a la pestaña **Build**.
 
-![LabImage](../images/1Capitulo2Lab38.png)
-
----
-
-**Paso 6.** Posiblemente te solicite nuevamente realizar un proceso de autenticación, de ser así hazlo, de lo contrario para al paso siguiente.
-
-![LabImage](../images/1Capitulo2Lab39.png)
-
----
-
-**Paso 7.** Una vez autenticado, haz clic en **Agregar y configurar**.
-
-![LabImage](../images/1Capitulo2Lab40.png)
-
----
-
-**Paso 8.** Ahora tienes una nueva herramienta para el agente en cuestión. Baja a la sección ***Entradas***, y fíjate que tanto el destinatario, como el asunto y el cuerpo del correo serán elegidos por el modelo de lenguaje, si bien, es posible personalizar estos parámetros, para este ejercicio los dejaremos así. 
-
-![LabImage](../images/1Capitulo2Lab41.png)
-![LabImage](../images/1Capitulo2Lab42.png)
-
----
-
-**Paso 9.** Cambia a la pestaña **Información general** y haz clic en el botón **Editar** de la sección ***Instrucciones***.
-
-![LabImage](../images/1Capitulo2Lab43.png)
-
----
-
-**Paso 10.** Agrega la siguiente instrucción al final de la que ya habías puesto manualmente, pero antes de la que ya estaba configurada:
+**Paso 6.** Agrega la siguiente instrucción en la sección de habilidades, comportamiento, etc.:
 
 `Si el usuario realiza una pregunta dentro del contexto del archivo de nómina, darás la respuesta acorde y preguntarás si desea que esa información se envíe por correo, de recibir una respuesta afirmativa procederás a enviarlo, de lo contrario le preguntarás si hay algo más en lo que desea que le ayudes.`
-
-Luego, haz clic en **Guardar**.
 
 ![LabImage](../images/1Capitulo2Lab44.png)
 
 ---
 
-**Paso 11.** Nuevamente en la ventana de chat de prueba del agente, envíale el siguiente prompt:
+**Paso 7.** Nuevamente en la pestaña **Preview** envíale el siguiente prompt para ponerlo a prueba:
 
 `¿Cuál es el área que en promedio gana menos?`
 
-Luego, dile que sí quieres que te envíe esta información por correo. 
+Luego, dile que sí quieres que te envíe esta información por correo y haz clic en **Allow** dado que se requieren permisos por parte del conector.
 
 ![LabImage](../images/1Capitulo2Lab45.png)
 
 ---
 
-**Paso 12.** Revisa el mensaje de advertencia en la solicitud de autorización, haz clic en **Permitir**.
-
-![LabImage](../images/1Capitulo2Lab46.png)
-
----
-
-**Paso 13.** Ahora, revisa el correo de la cuenta con la que te autenticastes en el conector, deberías tener un nuevo correo con la información solicitada.
-
-![LabImage](../images/1Capitulo2Lab47.png)
-![LabImage](../images/1Capitulo2Lab48.png)
-![LabImage](../images/1Capitulo2Lab49.png)
-
----
-
-**Paso 14.** Este error 550 5.7.708 indica que el servidor de correo de Microsoft rechazó el mensaje porque no acepta tráfico desde la dirección IP desde la que se intentó enviar el correo. Específicamente, significa:
-* "Access denied, traffic not accepted from this IP": El servidor considera que la IP tiene baja reputación o no está autorizada para enviar correos a través de Exchange Online.
-* Es común en clientes nuevos, especialmente si estás usando una suscripción de prueba de Microsoft 365 o si el servidor de envío no está correctamente configurado.
-* También puede ocurrir si estás enviando correos desde una aplicación o servicio externo (como Postman, Graph API, o un servidor SMTP personalizado) sin los permisos o licencias adecuadas.
-
-**Paso 15.** Para intentar resolver el problema ingresaremos a [Exchange Admin Center](https://admin.exchange.microsoft.com/) usando el siguiente link: `https://admin.exchange.microsoft.com/`. Una vez allí, seleccionarás **Mail flow** y luego **Rules**.
-
-![LabImage](../images/1Capitulo2Lab50.png)
-
----
-
-**Paso 16.** Haz clic en el botón **+ Add a rule** y selecciona la opción **Create a new rule**.
-
-![LabImage](../images/1Capitulo2Lab51.png)
-
----
-
-**Paso 17.** En la ventana que aparece, configura los siguientes parámetros
-
-* **Name:** `Permitir IP Confiable Copilot Studio`.
-**Apply this rule if...**: `The sender` -> `is external/internal` -> `InOrgaization`.
-
-* Haz clic en And para agregar otro parámetro que deberá quedar así: `The sender` -> `address matches any of these text pattern` -> ***el correo de tu usuario en el lab***.
-
-* **Do the following...**: `Modify the message properties` -> `Set the Spam Confidence Level (SCL)` -> `Bypass spam filtering`
-
-![LabImage](../images/1Capitulo2Lab52.png)
-
-Luego, haz clic en el botón **Next**.
-
----
-
-**Paso 18.** En la siguiente ventana, haz clic en el botón **Next**.
-
-![LabImage](../images/1Capitulo2Lab53.png)
-
----
-
-**Paso 19.** En la siguiente ventana, haz clic en el botón **Finish**.
-
-![LabImage](../images/1Capitulo2Lab54.png)
-
----
-
-**Paso 20.** Regresa a la ventana de chat de prueba del agente, envíale nuevamente el siguiente prompt:
-
-`¿Cuál es el área que en promedio gana más?`
-
-Luego, dile que sí quieres que te envíe esta información por correo.
-
-![LabImage](../images/1Capitulo2Lab55.png)
-
 ### Resultado esperado. 
 
-Revisa nuevamente el correo de la cuenta con la que te autenticastes en el conector, deberías tener un nuevo correo con la información solicitada.
+El agente te debe confirmar que envió el mensaje a tu cuenta de correo asignado para el laboratorio. Ingresa a `https://outlook.office.com/mail/` y corrobora que la información sea correcta.
 
-**NOTA IMPORTANTE:** ***Es normal que si haces nuevamente la prueba rebote el correo.***
-
-![LabImage](../images/1Capitulo2Lab56.png)
-
+![LabImage](../images/1Capitulo2Lab46.png)
+![LabImage](../images/1Capitulo2Lab47.png)
