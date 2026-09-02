@@ -360,20 +360,14 @@ Luego finaliza agregando un nuevo nodo de tipo **Redirigir a otro tema**, y sele
 
 ---
 
-**Paso 36.** Haz clic **Opciones de disponibilidad**
-
-![LabImage](../images/1Capitulo1Lab52.png)
-
----
-
-**Paso 37.** Llevalo al equipo que creaste inicialmente haciendo clic en **Agregar a Netec** y luego en **Agregar**.
+**Paso 36.** Llevalo al equipo que creaste inicialmente haciendo clic en **Agregar a Netec** y luego en **Agregar**.
 
 ![LabImage](../images/1Capitulo1Lab53.png)
 ![LabImage](../images/1Capitulo1Lab54.png)
 
 ---
 
-**Paso 38.** El bot te saludará en un ventana de chat. 
+**Paso 37.** El bot te saludará en un ventana de chat. 
 
 ![LabImage](../images/1Capitulo1Lab55.png)
 
