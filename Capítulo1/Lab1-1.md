@@ -15,16 +15,15 @@ El siguiente diagrama resume visualmente lo que realizarás a lo largo de la sig
 - 35 minutos.
 
 ## Instrucciones 
-La creación de agentes clásicos en Microsoft Teams consiste en configurar bots que interactúan con los usuarios mediante mensajes, comandos o tarjetas adaptativas. Estos agentes se desarrollan utilizando herramientas como el Microsoft Bot Framework y se integran a través de Azure Bot Services. Su función principal es automatizar tareas, responder preguntas frecuentes o facilitar procesos dentro del entorno colaborativo de Teams, utilizando flujos de conversación predefinidos y conectores a servicios externos.
+La creación de agentes en Microsoft Teams con Copilot Studio consiste en diseñar asistentes inteligentes que interactúan con los usuarios mediante mensajes, comandos o tarjetas adaptativas. Estos agentes se configuran directamente desde Copilot Studio, utilizando lenguaje natural, plantillas predefinidas o integración con Power Platform. Su función principal es automatizar tareas, responder preguntas frecuentes y facilitar procesos dentro del entorno colaborativo de Teams, aprovechando conectores estándar y premium para integrarse con servicios internos y externos.
 
-En el siguiente ejercicio, diseñarás un agente capaz de interactuar contigo en temas personalizados. Este agente podrá ejecutar acciones automáticamente, como enviar correos electrónicos, lo que te permitirá experimentar cómo se construyen soluciones inteligentes que mejoran la productividad y la comunicación dentro de Teams.
-
+En este ejercicio, diseñarás un agente capaz de interactuar contigo en temas personalizados. Este agente podrá ejecutar acciones automáticamente, como enviar correos electrónicos, generar reportes o activar flujos en Power Automate, lo que te permitirá experimentar cómo se construyen soluciones inteligentes que mejoran la productividad y la comunicación dentro de Teams.
 
 ### Tarea 1. Acceder a Copilot Studio en Teams.
 
 **Paso 1.** Ingresar a Teams
 
-Ingresa en tu navegador a [Mircosoft Teams](https://teams.microsoft.com/) usando el siguiente link: `https://teams.microsoft.com/`, y usa las credenciales otorgadas por el instructor. Si aparece alguna ventana emergente o de bienvenida ciérrala. 
+Ingresa a la aplicación de Microsoft Teams en tu máquina virtual, y usa las credenciales otorgadas por el instructor. Si aparece alguna ventana emergente o de bienvenida ciérrala. 
 
 ![LabImage](../images/1Capitulo1Lab1.png)
 
@@ -32,26 +31,18 @@ Ingresa en tu navegador a [Mircosoft Teams](https://teams.microsoft.com/) usando
 
 **Paso 2.** Instala Copilot Studio
 
-En el panel izquierdo, haz clic en Apps y luego usa la barra de búsqueda para encontrar `Microsoft Copilot Studio`. Al encontrarlo selecciona el botón ***Add***.
+En el panel izquierdo, haz clic en Apps y luego usa la barra de búsqueda para encontrar `Microsoft Copilot Studio`. Al encontrarlo selecciona la opción ***permissions*** del costado inferior de la ventana emergente.
 
 ![LabImage](../images/1Capitulo1Lab2.png)
 
 ---
 
 **Paso 3.** Verifica los permisos
-En la ventana emergente ubica la pestaña ***Permisos*** y revisa los permisos listados, una vez hecho esto, haz clic en el botón **Add** y posteriormente en el botón **Open** de la ventana de confirmación de aplicación añadida.
+Revisa los permisos listados, de ser necesario ingresa a **Permissions read and access** y **Permisions to perform this actions**. Una vez hecho esto, haz clic en el botón **Add** y posteriormente en el botón **Open** de la ventana de confirmación de aplicación añadida.
 
 ![LabImage](../images/1Capitulo1Lab3.png)
 
 ![LabImage](../images/1Capitulo1Lab4.png)
-
----
-
-**Paso 4.** Verificación de interfaz web
-
-Seguramente recibirás una recomendación para el uso de la app de escritorio, por propósitos de nuestro laboratorio continuaremos en la interfaz web. 
-
-![LabImage](../images/1Capitulo1Lab5.png)
 
 ### Tarea 2. Crear un equipo en Teams
 
@@ -81,6 +72,8 @@ Abre la interfaz haciendo clic en el botón **Start now**.
 
 ![LabImage](../images/1Capitulo1Lab6.png)
 
+> ⚠️ **Nota importante:** Recuerda iniciar sesión 
+
 ---
 
 **Paso 2.** Verás una ventana que te solicita seleccionar un equipo para iniciar, selecciona el equipo que creaste previamente: ***Netec***. Esto abrirá una ventana donde te dice que se está creando el chatbot y que puedes cerrar esa ventana, haz clic en **Close**.
@@ -95,6 +88,8 @@ Abre la interfaz haciendo clic en el botón **Start now**.
 ![LabImage](../images/1Capitulo1Lab13.png)
 
 ---
+
+> ⚠️ **Nota:** En el costado superior te aparecerá un mensaje que te dice que uses la versión web en lugar, por el momento lo ignoraremos. Si no se habilita el botón **+New copilot**, cierra Teams y vuelve a abrirlo.
 
 **Paso 4.** Lo primero que vamos a hacer es editar el idioma del agente, haz clic en **Edit language**, y luego busca y selecciona **Spanish (es-ES)**.
 
@@ -171,13 +166,23 @@ Luego haz clic nuevamente en la cruz **+** y selecciona nuevamente **Show a mess
 
  A cada opción, agrega un vínculo usando la opción que tiene un ícono de una cadena. Los vínculos a agregar son los siguientes:
 
- | Opción | Vínculo |
-| --- | --- |
-| Política de Seguridad de la Información | https://aznetecgroup29-my.sharepoint.com/:w:/g/personal/azstudent29_aznetecgroup29_onmicrosoft_com/ESEo-WtwPQ5InbSjhodc08wBBeXHeN1UVLCiJOAcLO_slg?e=Hmo9R0 |
-| Política de Uso Aceptable de Tecnología | https://aznetecgroup29-my.sharepoint.com/:w:/g/personal/azstudent29_aznetecgroup29_onmicrosoft_com/EawxZNlG-oVNiYFe_dGPSTYBT1miyw1CkvGI-pHoUbuifg?e=mqPvG5 |
-| Política de Respaldo y Recuperación | https://aznetecgroup29-my.sharepoint.com/:w:/g/personal/azstudent29_aznetecgroup29_onmicrosoft_com/Edawx6RgH29ArSpN2_O0QaIB8Xi58JWgSpvdYBx5HxJQrw?e=OTsr1y |
-| Política de Identidad y Acceso | https://aznetecgroup29-my.sharepoint.com/:w:/g/personal/azstudent29_aznetecgroup29_onmicrosoft_com/Ec4T0DMUQWlHtIeyOgljpGkBfj_NLJJjCE2mbD73Dy_05Q?e=wgDI98 |
-| Política de Identidad y Acceso | https://aznetecgroup29-my.sharepoint.com/:w:/g/personal/azstudent29_aznetecgroup29_onmicrosoft_com/EdPAfbokR5RIoah6jiGVGGgBRA3w8AP7kZN1jS9H0hebPw?e=hmpft9 |
+---
+
+**Crea un sitio de Sharepoint con los documentos**
+
+- En un navegador ingresa a sharepoint.microsoft.com. Si es necesario inicia sesión con la misma cuenta de Teams.
+- Del costado izquierdo, haz clic en la opción **Build**, y luego en **List**.
+![LabImage](../images/1Capitulo1Lab666.png)
+- Nuevamente selecciona **List**, agrega el nombre de la lista: ```Políticas de Seguridad```.
+![LabImage](../images/1Capitulo1Lab667.png)
+- Agrega un nuevo ítem por cada política, y adjunta cada documento de ejemplo que está en tu escritorio:
+ * Política de Seguridad de la Información	
+ * Política de Uso Aceptable de Tecnología	
+ * Política de Respaldo y Recuperación	
+ * Política de Identidad y Acceso
+- Por cada opción que agregaste en copilot studio agrega un vínculo al sharepoint anterior.
+
+---
 
 Luego haz clic en el botón **check** por cada vínculo agregado.
 
@@ -225,8 +230,8 @@ Luego haz clic en el botón **check** por cada vínculo agregado.
 
 **Paso 19.** Configura la pregunta con los siguientes parámetros:
 * **Formular una pregunta** Selecciona la política
-* **Identificar** Opciones de preguntas de tipo test
-* **Opciones** Política de Seguridad de la Información, Política de Concietización y capacitación, Política de Identidad y acceso
+* **Identificar** Opción múltiple
+* **Opciones** Política de Seguridad de la Información, Política de Concientización y capacitación, Política de Identidad y acceso
 
 **Nota:** ***Para este ejemplo sólo agregaremos esas tres***
 
@@ -237,6 +242,8 @@ Cambia el nombre de la variable de la respuesta almacenada para esa pregunta a: 
 ![LabImage](../images/1Capitulo1Lab34.png)
 
 ---
+
+> ⚠️**Nota importante** Antes de pasar al siguiente paso, debes guardar tu topic, de lo contrario, perderás tu avance. 
 
 **Paso 20.** Haz clic en el botón **+** debajo de la rama para la opción ***Política de Seguridad de la Información*** y selecciona **Llamar a una herramienta**. Luego, selecciona **Crea un flujo**.
 
@@ -257,13 +264,13 @@ Cambia el nombre de la variable de la respuesta almacenada para esa pregunta a: 
 
 ---
 
-**Paso 23.** Quita el valor dinámico ***Body*** del cuerpo del correo, y reemplazalo por el siguiente mensaje estático:
+**Paso 23.** Quita el valor dinámico ***Body*** del cuerpo del correo, y reemplázalo por el siguiente mensaje estático:
 
 >`¡Hola!`
 >
 >`De acuerdo a tu solicitud, a continuación envío la ruta donde se encuentran las políticas de seguridad, si no tienes acceso no dudes en comunicarte con tu administrador.`
 >
->`https://aznetecgroup29-my.sharepoint.com/:f:/g/personal/azstudent29_aznetecgroup29_onmicrosoft_com/EjiYFXC_g45Hg2xzfil_dZwBrJMBhxYS462pMXtWDfE9RQ?e=RDqEpO`
+>`<Reemplaza este texto por el link de la política seleccionada>`
 >
 >`Saludos`
 
@@ -353,20 +360,14 @@ Luego finaliza agregando un nuevo nodo de tipo **Redirigir a otro tema**, y sele
 
 ---
 
-**Paso 36.** Haz clic **Opciones de disponibilidad**
-
-![LabImage](../images/1Capitulo1Lab52.png)
-
----
-
-**Paso 37.** Llevalo al equipo que creaste inicialmente haciendo clic en **Agregar a Netec** y luego en **Agregar**.
+**Paso 36.** Llevalo al equipo que creaste inicialmente haciendo clic en **Agregar a Netec** y luego en **Agregar**.
 
 ![LabImage](../images/1Capitulo1Lab53.png)
 ![LabImage](../images/1Capitulo1Lab54.png)
 
 ---
 
-**Paso 38.** El bot te saludará en un ventana de chat. 
+**Paso 37.** El bot te saludará en un ventana de chat. 
 
 ![LabImage](../images/1Capitulo1Lab55.png)
 
