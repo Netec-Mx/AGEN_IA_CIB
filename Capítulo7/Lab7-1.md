@@ -63,31 +63,23 @@ Echale un vistazo al archivo. Contiene entradas y salidas esperadas que probará
 
 **Paso 3.** Regresa a la pestaña del navegador donde tienes abierto Azure AI Foundry. En el menú lateral izquierdo, haz clic en **Evaluation**, en la sección Protect and govern.
 
-Cambia a la pestaña **Manual evaluations**. Luego, haz clic en el botón **+ New manual evaluation**
+Haz clic en el botón **+ New evaluation**
 
 ![labimage](../images/7Capitulo1Lab5.png)
 
 ---
 
-**Paso 4.** En la nueva ventana cambia el mensaje del sistema por: `Ayudar a los usuarios con consultas relacionadas con viajes, ofreciendo sugerencias, consejos y recomendaciones como un agente de viajes experto.`.
-
-![labimage](../images/7Capitulo1Lab6.png)
+**Paso 4.** En la siguiente ventana selecciona la opción **Evaluate an existing query-response dataset** y luego en **Next**.
 
 ---
 
-**Paso 5.** En la sección inferior de ***Manual evaluation result***, haz clic en el botón **Import Test Data**.
+**Paso 5.** Haz clic en el botón **Upload new dataset**
 
 ![labimage](../images/7Capitulo1Lab7.png)
 
 ---
 
-**Paso 6.** En la ventana emergente, haz clic en el botón **Upload file**.
-
-![labimage](../images/7Capitulo1Lab8.png)
-
----
-
-**Paso 7.** Selecciona el archivo JSONL que descargaste previamente y haz clic en **Open**.
+**Paso 6.** Selecciona el archivo JSONL que descargaste previamente y haz clic en **Open**.
 
 ![labimage](../images/7Capitulo1Lab9.png)
 
@@ -95,14 +87,9 @@ Cambia a la pestaña **Manual evaluations**. Luego, haz clic en el botón **+ Ne
 
 **Paso 8.** Una vez que el archivo se haya cargado, haz clic en el botón **Next**.
 
-![labimage](../images/7Capitulo1Lab10.png)
-
 ---
 
-**Paso 9.** Observa cómo se organizaron los datos en preguntas y respuestas esperadas. Baja al constado inferior de la ventana y en **Dataser mapping** configura los siguientes valores:
-
-- Input: **Question**
-- Expected response: **ExpectedResponse**.
+**Paso 9.** Añade un nuevo criterio de evaluación haciendo clic en el botón **+ Add** y luego selecciona el criterio entre cualquiera de la última sección **Ensure safe and ethical content**. Una vez hecho esto, configura `{{item.Question}}` en **Query** y `{{item.ExpectedResponse}}` en Response.
 
 Luego haz clic en **Add**.
 
@@ -110,37 +97,11 @@ Luego haz clic en **Add**.
 
 ---
 
-**Paso 10.** Debieron haberse cargado las preguntas y respuestas esperadas. Haz clic en el botón **Run** para iniciar la respuesta de parte del modelo.
-
-![labimage](../images/7Capitulo1Lab12.png)
+**Paso 10.** Haz clic en **Next** y finalmente en **Submit**
 
 ---
 
-**Paso 11.** Una vez que el proceso haya finalizado, observa los resultados. Verás junto a la lista de preguntas y respuestas esperadas, las salidas generadas por el modelo.
-
-Las tasas de evaluación aún están en 0%, esto es normal, dado que necesitamos realizar la evaluación manualmente. 
-
-![labimage](../images/7Capitulo1Lab13.png)
-
----
-
-**Paso 12.** Evalua manualmente la respuesta generada de cada una de las preguntas. Si es correcto, márcalas con el ícono del pulgar arriba.
-
-![labimage](../images/7Capitulo1Lab14.png)
-
----
-
-**Paso 13.** Si la respuesta generada no es correcta, márcala con el ícono del pulgar abajo.
-
-![labimage](../images/7Capitulo1Lab15.png)
-
----
-
-**Paso 14.** Una vez que hayas evaluado todas las respuestas, observa cómo las tasas y métricas de evaluación se actualizan automáticamente.
-
-Puedes guardar o exportar los resultados. 
-
-![labimage](../images/7Capitulo1Lab16.png)
+**Paso 11.** Una vez que el proceso haya finalizado, observa los resultados. Exporta el resultado y analiza la evaluación realizada. Crea evaluaciones con otros criterios según tu preferencia de acuerdo al tiempo que tengas para finalizar esta actividad.
 
 ### Tarea 3. Crear un agente contextualizado para generar un archivo con datos estructurados.
 

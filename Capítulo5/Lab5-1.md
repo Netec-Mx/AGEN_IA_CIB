@@ -108,7 +108,7 @@ Luego, haz clic en **+ Deploy model** y finalmente en la opción **Deploy base m
 
 **Paso 4.** Regresa a la ventana princopal de **Models + endpoints**, ya deberías ver listado el deployment del modelo text-embedding-ada-002.
 
-Repite los pasos anteriores de esta tarea para desplegar el modelo **gpt-4o**.
+Repite los pasos anteriores de esta tarea para desplegar el modelo **gpt-4.1**.
 
 ![labimage](../images/5Capitulo1Lab12.png)
 ![labimage](../images/5Capitulo1Lab13.png)
@@ -118,10 +118,6 @@ Repite los pasos anteriores de esta tarea para desplegar el modelo **gpt-4o**.
 **IMPORTANTE** Si al hacer clic en el botón **Deploy** aparece una nueva ventana que te solicita crear un recurso en una región diferente a la del modelo anterior, no lo crees y consultalo con tu instructor.
 
 Si esto no sucede, omite esta nota. 
-
-![labimage](../images/5Capitulo1Lab15.png)
-
-Felicitaciones, deberías 
 
 ### Tarea 6. Configurar indices y vectores con datos de ejemplo
 
@@ -353,8 +349,6 @@ pip install -r requirements.txt
 
 **Paso 10.** Ahora dirígete a la opción **Models + endpoints** en el panel izquierdo, y copia y pega el nombre del modelo del chat y del embeddning respectivamente donde corresponde en el archivo **.env**.
 
-![labimage](../images/5Capitulo1Lab51.png)
-
 ---
 
 **Paso 11.** Ahora regresa a la pestaña del navegador del portal del Azure donde habías creado el recurso de AI Search, y usa la barra de búsqueda superior para buscar `AI Search`.
@@ -394,8 +388,6 @@ Puedes asegurarte que ese sea el nombre accediendo a la sección **Search manage
 ![labimage](../images/5Capitulo1Lab57.png)
 
 Ahora guárdalo y ciérralo.
-
-![labimage](../images/5Capitulo1Lab58.png)
 
 ### Tarea 8. Ejecutar y probar la aplicación con respuestas integras y seguras
 

@@ -91,7 +91,7 @@ Luego ejecuta el comando `ls` y valida que esté el archivo **serverMCP.py**.
 
 ---
 
-**Paso 2.** Desplazate hacia el costado inferior, y en la sección ***Explore models and capabilities*** busca `gpt-4o` y haz clic sobre él. 
+**Paso 2.** Desplazate hacia el costado inferior, y en la sección ***Explore models and capabilities*** busca `gpt-5-mini` y haz clic sobre él. 
 
 ![labimage](../images/2Capitulo1Lab11.png)
 
@@ -137,8 +137,10 @@ Luego ejecuta el comando `ls` y valida que esté el archivo **serverMCP.py**.
 **Paso 9.** Regresa a la ventana de PowerShell y vas a enviar los siguientes comandos, reemplazando tanto la **URL** como la **KEY** por los valores que pegaste en el bloc de notas, respectivamente. 
 
 ```bash
-export AZURE_OPENAI_ENDPOINHT="URL"
+export AZURE_OPENAI_ENDPOINT="URL"
 ```
+> ⚠️ *Importante:* Es posible que debas modificar la estructura de la URL copiada anteriormente, asegúrate que tenga este formato:
+> ```https://<EL_NOMBRE_DE_TU_PROYECTO>-resource.openai.azure.com/openai/deployments/gpt-5-mini/chat/completions?api-version=2024-02-01"```
 
 ![labimage](../images/2Capitulo1Lab19.png)
 
@@ -172,7 +174,7 @@ Postman es una herramienta de desarrollo que se utiliza para **diseñar, probar 
 
 **Paso 3.** En Postman, selecciona el método **POST** en la ventana de solicitud y luego agrega la siguiente URI. Reemplaza el valor **IP** por la dirección IP con la que accediste al servidor de Ubuntu en el **paso 3 de la Tarea 1**.
 
-`http://`**IP**`/ask?Content-Type=application/json`
+`http://`**IP**`:8080/ask?Content-Type=application/json`
 
 ![labimage](../images/2Capitulo1Lab23.png)
 
@@ -185,7 +187,7 @@ En la pestaña **Params** de Postman automáticamente debería agregarse el par�
 ```json
 {
     "prompt": "En una frase define la seguridad con IA",
-    "temperature": 0.2
+    "temperature": 1
 }
 ```
 
@@ -671,7 +673,7 @@ En la pestaña **Body**, asegurate de mantener la opción **raw** seleccionada, 
 ```json
 {
     "prompt": "Dame un resumen  de las transacciones sospechosas",
-    "temperature": 0.3
+    "temperature": 1
 }
 ```
 
